@@ -19,9 +19,9 @@ function calc() {
     });
 
 
- 
 
-     modalContent = `<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+    modalContent = `<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -29,7 +29,8 @@ function calc() {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <h3>Caro: ${nome}</h3>
+                <p>Caro
+            <strong>${nome}</strong></p>
                     <h5>O seu pedido é:</h5>`;
 
     for (var input of quantities) {
@@ -40,8 +41,8 @@ function calc() {
         }
     }
 
-    if(total>0){
-    modalContent += `<br><br><h2>Preço final: ${formatter.format(total)}</h2><br><br>
+    if (total > 0) {
+        modalContent += `<br><br><h2>Preço final: ${formatter.format(total)}</h2><br><br>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
@@ -49,8 +50,8 @@ function calc() {
             </div>
         </div>
     </div>`;
-    }else{
-        modalContent +=  `<br><br><h2>Erro: Você não selecionou nenhum prato</h2><br><br>
+    } else {
+        modalContent += `<br><br><h2>Erro: Você não selecionou nenhum prato</h2><br><br>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
