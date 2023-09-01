@@ -25,12 +25,12 @@ function calc() {
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Java</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Dados do pedido</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <h3>Caro: ${nome}</h3>
-                    <h5>Seguem os dados do seu pedido:</h5>`;
+                    <h5>O seu pedido é:</h5>`;
 
     for (var input of quantities) {
         var id = input.id;
@@ -44,7 +44,7 @@ function calc() {
     modalContent += `<br><br><h2>Preço final: ${formatter.format(total)}</h2><br><br>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
                 </div>
             </div>
         </div>
@@ -53,7 +53,7 @@ function calc() {
         modalContent +=  `<br><br><h2>Erro: Você não selecionou nenhum prato</h2><br><br>
         </div>
         <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
         </div>
     </div>
 </div>
@@ -62,7 +62,6 @@ function calc() {
     }
     output.innerHTML = modalContent;
 
-    // Recreate the modal
     $('#exampleModal').modal('show');
     output.innerHTML = "";
     modalContent = "";
